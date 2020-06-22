@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav {
+            display: flex;
+        }
+
+        button {
+            flex-grow: 1;
+        }
+
+        main {
+            /* outline: 2px solid orange; */
+            /* background-color: teal; */
+            width: 85vw;
+            margin: 0 auto;
+            position: relative
+        }
+
+        section {
+            height: 85vh;
+            width: 85vw;
+            margin: 0 auto;
+            border: 2px black solid;
+            position: absolute;
+        }
+
+        section {
+            opacity: 0;
+            transition: opacity 4s;
+            top:0;
+        }
+
+        section:nth-child(1) {
+            background-color: blue;
+            top:0
+            /* display: none; */
+        }
+
+        section:nth-child(2) {
+            background-color: green;
+            /* display: none; */
+            top:0
+        }
+
+        section:nth-child(3) {
+            background-color: red;
+            /* display: none; */
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <button>Prev</button>
+        <button>Next</button>
+    </nav>
+    <h1>Pages</h1>
+    <main>
+        <section>
+            <input type="text" name="" id="">
+        </section>
+        <section>
+            <input type="text" name="" id="">
+        </section>
+        <section>
+            <input type="text" name="" id="">
+        </section>
+    </main>
+
+
+    <script>
+        let PageInfo = { currentPage: null, index: null, sections: 0 }
+        window.onload = (e) => {
+            PageInfo.currentPage = document.querySelectorAll('section')[0] 
+            PageInfo.sections = document.querySelectorAll('section').length;
+            PageInfo.currentPage.style.opacity = 1;
+            PageInfo.currentPage.style.zIndex = 1000;
+            PageInfo.index = 0
+        }
+
+        document.querySelector('nav').addEventListener('click', (e) => {
+            let btn = e.target.textContent.toUpperCase()
+            PageInfo.currentPage.style.zIndex = -1;
+            PageInfo.currentPage.style.opacity = 0;
+            // currentPage.page.style.display = "none";
+            switch (btn) {
+                case "PREV":
+                PageInfo.index--
+                    if (PageInfo.index < 0) {
+                        PageInfo.index = 0;
+                    } 
+                    break;
+                case "NEXT":
+                PageInfo.index++
+                    if (PageInfo.index === PageInfo.sections) {
+                        PageInfo.index--
+                    } 
+                    break;
+            }
+            PageInfo.currentPage = document.querySelectorAll('section')[PageInfo.index]
+            // currentPage.page.style.display = "block";
+            PageInfo.currentPage.style.zIndex = 1000;
+            PageInfo.currentPage.style.opacity = 1;
+        })
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #res {
+      min-height: 100px;
+      background-color: lightgray;
+    }
+
+    .c1 {
+      background-color: yellow;
+    }
+
+    .c2 {
+      min-height: 100px;
+      background-color: red;
+      margin: 20px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- <div id="jq01"></div> -->
+  <div id="jq02-selectors">
+    <h1>JQuery</h1>
+    <div class="classic">
+      <p>Write less do <span id="spanId">More</span></p>
+      <p id="oId">Current version 3.3.1</p>
+    </div>
+    <p>Require knowlegde in:</p>
+    <ul id="listId">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>Javascript</li>
+    </ul>
+    <h3>Version information:</h3>
+    <table class="classic" border="1">
+      <tr>
+        <td>ver</td>
+        <td>gzip</td>
+      </tr>
+      <tr>
+        <td>1.x</td>
+        <td>31kb</td>
+      </tr>
+      <tr>
+        <td>2.x</td>
+        <td>27.7kb</td>
+      </tr>
+      <tr>
+        <td>3.x</td>
+        <td>29.9kb</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- <div id="jq03-dom-traversal">
+    <ul>
+      <li>0</li>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+  </div> -->
+  <div id="jq04-dom-manipulation">
+    <a href="#" id="a1">first link</a>
+    <a href="#" id="a2">second link</a>
+    <p id="p1" dir="ltr"><b>first paragraph</b></p>
+    <p id="p2" dir="ltr" class="c1"><b>second paragraph</b></p>
+    <input type="text" placeholder="enter text">
+    <div id="res">result here....</div>
+    <button onclick="func()">Click Me</button>
+  </div>
+
+  <!-- local  -->
+  <script src="jquery-3.3.1.js"></script>
+  <!-- <script src="jquery02-selectors.js"></script> -->
+  <!-- <script src="jquery03-dom_traversing.js"></script> -->
+  <!-- <script src="jquery04-dom_manipulation.js"></script> -->
+
+  <!-- CDN  -->
+  <!-- <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script> -->
+</body>
+
+</html>

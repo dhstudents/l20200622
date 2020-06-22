@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery</title>
+</head>
+
+<body>
+    <p>I am a paragraph</p>
+    <ul id="i1">
+        <li>item 8</li>
+        <li>item 9</li>
+        <li>item 10
+            <ul class="c1">
+                <li title="12"><a href="#">link me</a></li>
+                <!-- <a href="">next</a> -->
+                <li>13</li>
+                <li>14
+                    <p>This is a link:<a href="#">link we</a></p>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" 
+        crossorigin="anonymous">
+    </script>
+    <script>
+        let elements
+        $(function() {
+           // basic selectors
+           //-----------------
+           // elements = $('.c1')
+           // elements = $('p')
+           // elements = $('#i1')
+           // elements = $('#i1 , .c1')
+
+           // Hierarchy selectors
+           //--------------------
+           // elements = $('ul#i1 > li')
+           // elements = $('ul#i1 li')
+           // elements = $('li+a')   //NEXT: https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_sel_previous_next
+           //elements = $('li~a')    // SIBLING: https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_sel_previous_siblings
+
+           console.log(elements)  
+           
+        });
+    </script>
+</body>
+
+</html>
