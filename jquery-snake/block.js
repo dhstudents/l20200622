@@ -18,8 +18,6 @@ true
 
 */
 
-
-
 // constructore
 var Block = function (col, row) {
     this.col = col;

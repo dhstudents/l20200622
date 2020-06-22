@@ -2,8 +2,6 @@
 var snake = new Snake();
 snake.draw();
 */
-
-
 var Snake = function () {
     this.segments = [
         new Block(7, 5),
@@ -64,8 +62,7 @@ Snake.prototype.checkCollision = function (head) {
     var rightCollision = (head.col === widthInBlocks - 1);
     var bottomCollision = (head.row === heightInBlocks - 1);
 
-    var wallCollision = leftCollision || topCollision ||
-        rightCollision || bottomCollision;
+    var wallCollision = leftCollision || topCollision ||  rightCollision || bottomCollision;
 
     var selfCollision = false;
     for (var i = 0; i < this.segments.length; i++) {
